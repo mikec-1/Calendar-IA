@@ -13,7 +13,7 @@ This is an iOS application with the main idea of letting users manage their cale
 
 ## Prerequisites & Dependencies
 
-Before you begin, you need to have the following installed:
+To use my code, you need to have the following installed:
 
 *   **Xcode:** Version 13.0 or higher (available on the Mac App Store).
 *   **Swift:** Version 5.0 or higher (included with Xcode).
