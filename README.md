@@ -22,36 +22,6 @@ To use my code, you need to have the following installed:
     sudo gem install cocoapods
     ```
 
-## Usage Examples & API Documentation
-
-My project uses standard iOS frameworks and Swift syntax. For specific API details, refer to the official Apple documentation and inline code comments.
-
-```swift
-// Example: Creating a new event
-import EventKit
-
-let eventStore = EKEventStore()
-
-eventStore.requestAccess(to: .event) { (granted, error) in
-    if granted {
-        let newEvent = EKEvent(eventStore: eventStore)
-        newEvent.title = "Meeting with Client"
-        newEvent.startDate = Date()
-        newEvent.endDate = Date().addingTimeInterval(3600) // One hour later
-        newEvent.calendar = eventStore.defaultCalendarForNewEvents
-
-        do {
-            try eventStore.save(newEvent, span: .thisEvent)
-            print("Event saved successfully!")
-        } catch let error as NSError {
-            print("Failed to save event with error : \(error)")
-        }
-    } else {
-        print("Access to calendar not granted")
-    }
-}
-```
-
 ## Configuration Options
 
 *   **UI elements:** Adjust colors, fonts, and layouts in the Interface Builder.
