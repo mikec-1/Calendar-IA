@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06E080040EACD6B882937F4D /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D148FD3DB87A939DB3FAA98 /* WeatherManager.swift */; };
+		0B86CCE28633F72C891D8482 /* CategorySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09804A8E9933B6780DCBA0C /* CategorySettingsView.swift */; };
+		1501BC6108B2B366A4ED7D73 /* TaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C8AB6D7CECC3C33F288B1 /* TaskCategory.swift */; };
+		23CD3984C1E18022BBB96F34 /* HourlyTimeGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6C36307D685055482CA96 /* HourlyTimeGrid.swift */; };
 		2705E5F2298A84A20073479F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2705E5F1298A84A20073479F /* MapView.swift */; };
 		2705E5F4298A85970073479F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2705E5F3298A85970073479F /* MapViewModel.swift */; };
 		270ADB6E298CE3B40031018E /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ADB6D298CE3B40031018E /* CalendarDay.swift */; };
-		270D28AC298CDDCD0030A102 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D28AB298CDDCD0030A102 /* HomeViewController.swift */; };
 		2732EEFE29885FAA00F8C6B2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732EEFD29885FAA00F8C6B2 /* TabBarController.swift */; };
+		273AA3102F590C8D0057863F /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 273AA30F2F590C8D0057863F /* FloatingPanel */; };
 		274B7C5E2984332100DCFF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B7C5D2984332100DCFF44 /* AppDelegate.swift */; };
 		274B7C602984332100DCFF44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B7C5F2984332100DCFF44 /* SceneDelegate.swift */; };
 		274B7C622984332100DCFF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B7C612984332100DCFF44 /* ViewController.swift */; };
@@ -30,15 +34,41 @@
 		27F652C8298C86060046A1CB /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F652C7298C86060046A1CB /* DailyViewController.swift */; };
 		27F652CA298C863D0046A1CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F652C9298C863D0046A1CB /* SettingsViewController.swift */; };
 		27FEEB442985B8BB008F860E /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEEB432985B8BB008F860E /* EventCell.swift */; };
+		33F33385B8FCA690FE10738C /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E155427ECAC2AF9182F18511 /* CalendarCellView.swift */; };
+		49830C43F848E200811A3C7C /* AddEventSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD1BE645562EC4CAD6A559 /* AddEventSheet.swift */; };
+		6826167DD372BD2DBE3FBA95 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867B481A7248ACBBE09A39D /* Theme.swift */; };
+		7E83ADA2ADFD3B1540BBBEEB /* EventSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463DC808ADC3D1804E1B7B12 /* EventSearchView.swift */; };
+		7F0125C9DFE5D6E57B077BC0 /* DayInlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926180D259CA366C89F9F04 /* DayInlineView.swift */; };
+		83B300D000A9D144D10AD59A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF302D493AF0814A4815BB /* MainTabView.swift */; };
+		85085668598994B63B9DCE48 /* TasksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F6571739F43352115485F /* TasksListView.swift */; };
+		88815F95103CF4DFFC979F77 /* CalendarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FE915AFFA7329E23610037 /* CalendarContainerView.swift */; };
+		90F37E6E39B7762C1493CCF9 /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F505EB73BEEAB7EA4E0AA3 /* SettingsSwiftUIView.swift */; };
+		A059CD3F40D7F17BECCABCB7 /* WeatherGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B104691ADC804C66BB1B6657 /* WeatherGradientView.swift */; };
+		A74ECE52129FE06215282EEE /* AddCategorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5D6C726313CEF9627A4432 /* AddCategorySheet.swift */; };
+		B0D94CABAF174D10FBF7CF6F /* AnimatedWeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB81503AD870A89CFB77E9 /* AnimatedWeatherIcon.swift */; };
+		BBADD0E1A053D9CD07C93D41 /* SwipeGestureModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB771E41EDD41515BD87B1 /* SwipeGestureModifier.swift */; };
+		C0504FB1320CE2E6F925A257 /* MonthGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2E8BB2AA10D84AB3EB9AE /* MonthGridView.swift */; };
+		CFE4DE0B18D42D7B0144905D /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10837554620427064796E3A6 /* CalendarViewModel.swift */; };
+		D46F1046A46B5D4CC81C9425 /* AgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580696B0815ED86DE0368DA3 /* AgendaView.swift */; };
+		E0747E7E0B155ABB51E640C5 /* HourlyWeatherTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3514E02707D7801859FAB6 /* HourlyWeatherTimeline.swift */; };
+		E0E20AE1BB2269C30FDC70ED /* WeekGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9738924F43C9AEEA2A6FEA /* WeekGridView.swift */; };
+		E0EAE27AE4B0B05380CAACB8 /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921F1693F2F5130E9D0EE946 /* WeatherCardView.swift */; };
+		E12D5A8AAC157FC66979E15A /* DayAgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B45AD687435EA82BDAF25E /* DayAgendaView.swift */; };
 		E33DDF82C814F09949CB461D /* Pods_Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27150F0C3DF8377BE4B49AE6 /* Pods_Calendar.framework */; };
+		E54D7985BEDF61F090016874 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1271224D1390745C0DFE5F8 /* TodoItem.swift */; };
+		F28986E9F64196E0F2E5B5FB /* AddTaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B3E7892DDAE26BD071D07 /* AddTaskSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048B3E7892DDAE26BD071D07 /* AddTaskSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddTaskSheet.swift; sourceTree = "<group>"; };
+		0A2F6571739F43352115485F /* TasksListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TasksListView.swift; sourceTree = "<group>"; };
 		0C0736C59AAC474FB0D65F14 /* Pods-Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.debug.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.debug.xcconfig"; sourceTree = "<group>"; };
+		10837554620427064796E3A6 /* CalendarViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		10AB771E41EDD41515BD87B1 /* SwipeGestureModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeGestureModifier.swift; sourceTree = "<group>"; };
+		1B5D6C726313CEF9627A4432 /* AddCategorySheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddCategorySheet.swift; sourceTree = "<group>"; };
 		2705E5F1298A84A20073479F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2705E5F3298A85970073479F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		270ADB6D298CE3B40031018E /* CalendarDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
-		270D28AB298CDDCD0030A102 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		27150F0C3DF8377BE4B49AE6 /* Pods_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2732EEFD29885FAA00F8C6B2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		274B7C5A2984332100DCFF44 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +91,27 @@
 		27F652C7298C86060046A1CB /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		27F652C9298C863D0046A1CB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		27FEEB432985B8BB008F860E /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		2DEF302D493AF0814A4815BB /* MainTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		38FE915AFFA7329E23610037 /* CalendarContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarContainerView.swift; sourceTree = "<group>"; };
+		463DC808ADC3D1804E1B7B12 /* EventSearchView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventSearchView.swift; sourceTree = "<group>"; };
+		46B45AD687435EA82BDAF25E /* DayAgendaView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DayAgendaView.swift; sourceTree = "<group>"; };
+		580696B0815ED86DE0368DA3 /* AgendaView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AgendaView.swift; sourceTree = "<group>"; };
+		5C9738924F43C9AEEA2A6FEA /* WeekGridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WeekGridView.swift; sourceTree = "<group>"; };
+		6926180D259CA366C89F9F04 /* DayInlineView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DayInlineView.swift; sourceTree = "<group>"; };
+		6D148FD3DB87A939DB3FAA98 /* WeatherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		6E3514E02707D7801859FAB6 /* HourlyWeatherTimeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HourlyWeatherTimeline.swift; sourceTree = "<group>"; };
+		74F2E8BB2AA10D84AB3EB9AE /* MonthGridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MonthGridView.swift; sourceTree = "<group>"; };
+		76DD1BE645562EC4CAD6A559 /* AddEventSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddEventSheet.swift; sourceTree = "<group>"; };
+		921F1693F2F5130E9D0EE946 /* WeatherCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
+		A867B481A7248ACBBE09A39D /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A8F505EB73BEEAB7EA4E0AA3 /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
+		B09804A8E9933B6780DCBA0C /* CategorySettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategorySettingsView.swift; sourceTree = "<group>"; };
+		B104691ADC804C66BB1B6657 /* WeatherGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WeatherGradientView.swift; sourceTree = "<group>"; };
+		B8D6C36307D685055482CA96 /* HourlyTimeGrid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HourlyTimeGrid.swift; sourceTree = "<group>"; };
+		C74C8AB6D7CECC3C33F288B1 /* TaskCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TaskCategory.swift; sourceTree = "<group>"; };
+		DBBB81503AD870A89CFB77E9 /* AnimatedWeatherIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimatedWeatherIcon.swift; sourceTree = "<group>"; };
+		E155427ECAC2AF9182F18511 /* CalendarCellView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
+		F1271224D1390745C0DFE5F8 /* TodoItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		FEE27F0B684C78943EC5E97B /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E33DDF82C814F09949CB461D /* Pods_Calendar.framework in Frameworks */,
+				273AA3102F590C8D0057863F /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +131,6 @@
 		270D28AA298CDDC60030A102 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				270D28AB298CDDCD0030A102 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -96,6 +147,32 @@
 				27F652C5298C85F20046A1CB /* DailyCell.swift */,
 				27F652C7298C86060046A1CB /* DailyViewController.swift */,
 				270ADB6D298CE3B40031018E /* CalendarDay.swift */,
+				B8D6C36307D685055482CA96 /* HourlyTimeGrid.swift */,
+				2DEF302D493AF0814A4815BB /* MainTabView.swift */,
+				048B3E7892DDAE26BD071D07 /* AddTaskSheet.swift */,
+				F1271224D1390745C0DFE5F8 /* TodoItem.swift */,
+				6926180D259CA366C89F9F04 /* DayInlineView.swift */,
+				E155427ECAC2AF9182F18511 /* CalendarCellView.swift */,
+				6E3514E02707D7801859FAB6 /* HourlyWeatherTimeline.swift */,
+				38FE915AFFA7329E23610037 /* CalendarContainerView.swift */,
+				580696B0815ED86DE0368DA3 /* AgendaView.swift */,
+				A8F505EB73BEEAB7EA4E0AA3 /* SettingsSwiftUIView.swift */,
+				5C9738924F43C9AEEA2A6FEA /* WeekGridView.swift */,
+				6D148FD3DB87A939DB3FAA98 /* WeatherManager.swift */,
+				B09804A8E9933B6780DCBA0C /* CategorySettingsView.swift */,
+				74F2E8BB2AA10D84AB3EB9AE /* MonthGridView.swift */,
+				DBBB81503AD870A89CFB77E9 /* AnimatedWeatherIcon.swift */,
+				10837554620427064796E3A6 /* CalendarViewModel.swift */,
+				463DC808ADC3D1804E1B7B12 /* EventSearchView.swift */,
+				A867B481A7248ACBBE09A39D /* Theme.swift */,
+				46B45AD687435EA82BDAF25E /* DayAgendaView.swift */,
+				76DD1BE645562EC4CAD6A559 /* AddEventSheet.swift */,
+				0A2F6571739F43352115485F /* TasksListView.swift */,
+				1B5D6C726313CEF9627A4432 /* AddCategorySheet.swift */,
+				10AB771E41EDD41515BD87B1 /* SwipeGestureModifier.swift */,
+				921F1693F2F5130E9D0EE946 /* WeatherCardView.swift */,
+				C74C8AB6D7CECC3C33F288B1 /* TaskCategory.swift */,
+				B104691ADC804C66BB1B6657 /* WeatherGradientView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -220,6 +297,9 @@
 				Base,
 			);
 			mainGroup = 274B7C512984332100DCFF44;
+			packageReferences = (
+				273AA30E2F590C8D0057863F /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+			);
 			productRefGroup = 274B7C5B2984332100DCFF44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,9 +331,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Calendar/Pods-Calendar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Calendar/Pods-Calendar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,7 +375,6 @@
 			files = (
 				27E8BA4429844245005340E6 /* CalendarHelper.swift in Sources */,
 				27FEEB442985B8BB008F860E /* EventCell.swift in Sources */,
-				270D28AC298CDDCD0030A102 /* HomeViewController.swift in Sources */,
 				27B8AAD7298B0702003FFF6D /* LocationManager.swift in Sources */,
 				27A02FA62985590D00DEC744 /* Event.swift in Sources */,
 				2732EEFE29885FAA00F8C6B2 /* TabBarController.swift in Sources */,
@@ -309,6 +392,32 @@
 				274B7C602984332100DCFF44 /* SceneDelegate.swift in Sources */,
 				274B7C722984389100DCFF44 /* CalendarCell.swift in Sources */,
 				27B8AACF298B009F003FFF6D /* HomeController.swift in Sources */,
+				23CD3984C1E18022BBB96F34 /* HourlyTimeGrid.swift in Sources */,
+				83B300D000A9D144D10AD59A /* MainTabView.swift in Sources */,
+				F28986E9F64196E0F2E5B5FB /* AddTaskSheet.swift in Sources */,
+				E54D7985BEDF61F090016874 /* TodoItem.swift in Sources */,
+				7F0125C9DFE5D6E57B077BC0 /* DayInlineView.swift in Sources */,
+				33F33385B8FCA690FE10738C /* CalendarCellView.swift in Sources */,
+				E0747E7E0B155ABB51E640C5 /* HourlyWeatherTimeline.swift in Sources */,
+				88815F95103CF4DFFC979F77 /* CalendarContainerView.swift in Sources */,
+				D46F1046A46B5D4CC81C9425 /* AgendaView.swift in Sources */,
+				90F37E6E39B7762C1493CCF9 /* SettingsSwiftUIView.swift in Sources */,
+				E0E20AE1BB2269C30FDC70ED /* WeekGridView.swift in Sources */,
+				06E080040EACD6B882937F4D /* WeatherManager.swift in Sources */,
+				0B86CCE28633F72C891D8482 /* CategorySettingsView.swift in Sources */,
+				C0504FB1320CE2E6F925A257 /* MonthGridView.swift in Sources */,
+				B0D94CABAF174D10FBF7CF6F /* AnimatedWeatherIcon.swift in Sources */,
+				CFE4DE0B18D42D7B0144905D /* CalendarViewModel.swift in Sources */,
+				7E83ADA2ADFD3B1540BBBEEB /* EventSearchView.swift in Sources */,
+				6826167DD372BD2DBE3FBA95 /* Theme.swift in Sources */,
+				E12D5A8AAC157FC66979E15A /* DayAgendaView.swift in Sources */,
+				49830C43F848E200811A3C7C /* AddEventSheet.swift in Sources */,
+				85085668598994B63B9DCE48 /* TasksListView.swift in Sources */,
+				A74ECE52129FE06215282EEE /* AddCategorySheet.swift in Sources */,
+				BBADD0E1A053D9CD07C93D41 /* SwipeGestureModifier.swift in Sources */,
+				E0EAE27AE4B0B05380CAACB8 /* WeatherCardView.swift in Sources */,
+				1501BC6108B2B366A4ED7D73 /* TaskCategory.swift in Sources */,
+				A059CD3F40D7F17BECCABCB7 /* WeatherGradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +574,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,6 +605,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,6 +642,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		273AA30E2F590C8D0057863F /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		273AA30F2F590C8D0057863F /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AA30E2F590C8D0057863F /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 274B7C522984332100DCFF44 /* Project object */;
 }
