@@ -1,22 +1,18 @@
 PODS:
-  - FloatingPanel (2.5.5)
   - SPPermissions/Core (5.5.8)
   - SPPermissions/Location (5.5.8):
     - SPPermissions/Core
 
 DEPENDENCIES:
-  - FloatingPanel
   - SPPermissions/Location
 
 SPEC REPOS:
   trunk:
-    - FloatingPanel
     - SPPermissions
 
 SPEC CHECKSUMS:
-  FloatingPanel: a27e7827e0f710fa6236fe2596dd1b5484cb4fc1
   SPPermissions: 77d05b0b8489f4c3faefa47317d5af0179c2bfd1
 
-PODFILE CHECKSUM: fa921dac6330b5bd3e41bf26033e78ff4cc9b452
+PODFILE CHECKSUM: 375334d6b34945a44237c1c2cd7dea37127afd19
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.16.2
