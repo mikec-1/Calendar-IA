@@ -6,17 +6,72 @@
 //
 
 import UIKit
+import SwiftUI
+import SwiftData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    var sharedModelContainer: ModelContainer = {
+        let schema = Schema([
+            Event.self,
+            TodoItem.self,
+            TaskCategory.self
+        ])
+        
+        let fileManager = FileManager.default
+        let documentDirectoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let storeURL = documentDirectoryURL.appendingPathComponent("Calendar.store")
+        
+        let modelConfiguration = ModelConfiguration(schema: schema, url: storeURL)
+
+        do {
+            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+        } catch {
+            print("Migration failed, wiping database due to schema change: \(error)")
+            try? fileManager.removeItem(at: storeURL)
+            let shmURL = storeURL.deletingPathExtension().appendingPathExtension("store-shm")
+            let walURL = storeURL.deletingPathExtension().appendingPathExtension("store-wal")
+            try? fileManager.removeItem(at: shmURL)
+            try? fileManager.removeItem(at: walURL)
+            
+            do {
+                return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            } catch {
+                fatalError("Could not create ModelContainer even after wipe: \(error)")
+            }
+        }
+    }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        // Pass the SwiftData context into CalendarViewModel
+        CalendarViewModel.shared.modelContext = sharedModelContainer.mainContext
+        
+        let themeManager = ThemeManager()
+        
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = UIHostingController(
+            rootView: MainTabView()
+                .modelContainer(sharedModelContainer)
+                .environmentObject(themeManager)
+        )
+        self.window = window
+        window.makeKeyAndVisible()
+        
+        // Apply the saved theme preference on launch
+        let savedTheme = UserDefaults.standard.integer(forKey: "appTheme")
+        
+        switch savedTheme {
+        case 1:
+            window.overrideUserInterfaceStyle = .light
+        case 2:
+            window.overrideUserInterfaceStyle = .dark
+        default:
+            window.overrideUserInterfaceStyle = .unspecified
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

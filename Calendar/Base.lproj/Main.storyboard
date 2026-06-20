@@ -200,7 +200,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Monthly Calendar" id="YMC-Jo-yAr">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="8JM-w3-TeP">
+                        <barButtonItem key="rightBarButtonItem" id="8JM-w3-TeP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bO6-xO-S5f">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -405,7 +405,7 @@
                                     <segue destination="L5k-At-GqG" kind="show" id="rll-hi-GL1"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="eLT-or-7Ty">
+                            <barButtonItem id="eLT-or-7Ty">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jAM-WG-HTh">
                                     <rect key="frame" x="273.66666666666669" y="5" width="61.333333333333314" height="34.333333333333336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -459,6 +459,16 @@
                                     <constraint firstAttribute="height" constant="31" id="c7h-2m-x5j"/>
                                 </constraints>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15m Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myReminderLabel">
+                                <rect key="frame" x="59" y="260" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="myReminderSwitch">
+                                <rect key="frame" x="285" y="255" width="51" height="31"/>
+                            </switch>
+
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IQy-Qj-J69">
                                 <rect key="frame" x="240" y="299.33333333333331" width="94" height="31"/>
                             </stepper>
@@ -525,7 +535,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Event" id="Qy4-Ng-qA1">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="mqI-eo-yry">
+                        <barButtonItem key="rightBarButtonItem" id="mqI-eo-yry">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XmT-XK-fff">
                                 <rect key="frame" x="290.33333333333331" y="5" width="86.666666666666686" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -539,6 +549,8 @@
                     <connections>
                         <outlet property="datePicker" destination="MlN-nG-Vf7" id="vsl-MK-gM2"/>
                         <outlet property="nameTextField" destination="3QX-gb-MCr" id="byt-cf-aDf"/>
+                        <outlet property="locationTextField" destination="myLocationField" id="myLocationFieldId"/>
+                        <outlet property="reminderSwitch" destination="myReminderSwitch" id="myReminderSwitchId"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcA-dR-BjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -556,7 +568,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="LMe-lE-xw4">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="iZ2-Fo-jzW">
+                        <barButtonItem key="rightBarButtonItem" id="iZ2-Fo-jzW">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DrE-be-cVY">
                                 <rect key="frame" x="290" y="4.6666666666666679" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -601,7 +613,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <mutableString key="text">Welcome.   This is a Calendar based Organizer, designed specifically with Film in mind. This application allows users to view the Calendar in a Monthly, Weekly, or Daily View.   When adding a new Event, users are able to select options such as filming location, number of shots and cast members.   Everything can be found under the 'Calendar' item in the Taskbar.   The Settings allow users to toggle the Dark Mode Theme.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -680,7 +692,7 @@
             <objects>
                 <navigationController id="gqj-yL-bTU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="pF8-zp-S0x">
-                        <imageReference key="image" image="folder.badge.gear" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="folder.badge.gearshape" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HDB-PT-xr8">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -697,7 +709,7 @@
         <!--Daily Calendar-->
         <scene sceneID="sg3-m4-uRD">
             <objects>
-                <viewController id="H0T-bU-CJy" customClass="DailyViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H0T-bU-CJy" customClass="DailyViewController" storyboardIdentifier="DailyViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KLm-f1-cBW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -835,7 +847,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Daily Calendar" id="hQb-tw-ha1">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2Zk-cP-aWe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Zk-cP-aWe">
                             <connections>
                                 <segue destination="L5k-At-GqG" kind="show" id="CpL-Mk-QML"/>
                             </connections>
@@ -861,7 +873,7 @@
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
         <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="folder.badge.gear" catalog="system" width="128" height="91"/>
+        <image name="folder.badge.gearshape" catalog="system" width="128" height="91"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

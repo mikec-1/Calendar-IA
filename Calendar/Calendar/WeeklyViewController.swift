@@ -65,7 +65,7 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
         if(date == selectedDate) {
             cell.backgroundColor = UIColor.systemGreen
         } else {
-            cell.backgroundColor = UIColor.white
+            cell.backgroundColor = UIColor.clear
         }
         
         return cell
@@ -148,13 +148,13 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Event().eventsForDate(date: selectedDate).count
+        return CalendarViewModel.shared.events(for: selectedDate).count
     }
     
     //returns a cell for the specified index path in the table view. dequeues a reusable "EventCell", sets its text to the name and time of the event for the "selectedDate", and returns the cell.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as! EventCell
-        let event = Event().eventsForDate(date: selectedDate)[indexPath.row]
+        let event = CalendarViewModel.shared.events(for: selectedDate)[indexPath.row]
         cell.eventLabel.text = event.name + " at " + CalendarHelper().timeString(date: event.date)
         return cell
     }

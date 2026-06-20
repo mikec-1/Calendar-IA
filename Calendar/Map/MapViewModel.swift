@@ -16,15 +16,19 @@ class MapViewModel: NSObject, ObservableObject , CLLocationManagerDelegate{
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         //Checking Permissions for location access
-        switch manager.authorizationStatus {
-        case .denied: 
-            //Alert
-            permissionDenied.toggle()
-        case .notDetermined:
-            //Request
-            manager.requestWhenInUseAuthorization()
-        default: 
-            ()
+        if #available(iOS 14.0, *) {
+            switch manager.authorizationStatus {
+            case .denied: 
+                //Alert
+                permissionDenied.toggle()
+            case .notDetermined:
+                //Request
+                manager.requestWhenInUseAuthorization()
+            default: 
+                ()
+            }
+        } else {
+            // Fallback on earlier versions
         }
         
     }

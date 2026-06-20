@@ -99,19 +99,22 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //Set the first event's details
     func setEvent1(_ cell: DailyCell, _ event: Event) {
         cell.event1.isHidden = false //Unhide the first event label
-        cell.event1.text = event.name //Set event name as the text for the first event label
+        let locationStr = event.locationName != nil ? " - \(event.locationName!)" : ""
+        cell.event1.text = event.name + locationStr //Set event name as the text for the first event label
     }
     
     //Set the second event's details
     func setEvent2(_ cell: DailyCell, _ event: Event) {
         cell.event2.isHidden = false //Unhide the second event label
-        cell.event2.text = event.name //Set event name as the text for the second event label
+        let locationStr = event.locationName != nil ? " - \(event.locationName!)" : ""
+        cell.event2.text = event.name + locationStr //Set event name as the text for the second event label
     }
     
     //Set the third event's details
     func setEvent3(_ cell: DailyCell, _ event: Event) {
         cell.event3.isHidden = false //Unhide the third event label
-        cell.event3.text = event.name //Set event name as the text for the third event label
+        let locationStr = event.locationName != nil ? " - \(event.locationName!)" : ""
+        cell.event3.text = event.name + locationStr //Set event name as the text for the third event label
     }
     
     //Set more events count
@@ -126,7 +129,8 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let hour = hours[indexPath.row] //Get hour for the current row
         cell.time.text = formatHour(hour: hour) //Set the time label text to formatted hour
         
-        let events = Event().eventsForDateAndTime(date: selectedDate, hour: hour) //Get events for the given date and time
+        // Fetch events for this hour from the shared ViewModel
+        let events = CalendarViewModel.shared.events(for: selectedDate, hour: hour)
         setEvents(cell, events) //Set the events for the cell
         
         return cell //Return the cell
