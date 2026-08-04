@@ -60,7 +60,7 @@ The project as it was before this update — the original 2023 IB CS IA code —
 *   **Original (2023):** [`ib-cs-ia-2023`](https://github.com/mikec-1/Calendar-IA/tree/ib-cs-ia-2023)
 *   **Everything that changed:** [compare `ib-cs-ia-2023...main`](https://github.com/mikec-1/Calendar-IA/compare/ib-cs-ia-2023...main)
 
-**Disclaimer:** This project was built with the help of generative AI tools such as Claude Code and Gemini Pro. I used them in part as a way to learn, to expand my knowledge and to explore what's possible in Swift. The original 2023 project was written entirely by me, and the design, direction, and architecture of the newer work are my own.
+**Disclaimer:** This project was built with the help of generative AI tools such as Claude Code. I used them in part as a way to learn, to expand my knowledge and to explore what's possible in Swift. The original 2023 project was written entirely by me, and the design, direction, and architecture of the newer work are my own.
 
 ## License
 
